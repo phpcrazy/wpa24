@@ -7,7 +7,7 @@
 */
 
 function get_view($view) {
-	$file =  DD . "app/view/" . $view . ".php";
+	$file =  DD . "/app/view/" . $view . ".php";
 	if(file_exists($file)) {
 		include $file;
 	} else {

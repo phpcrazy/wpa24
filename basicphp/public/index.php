@@ -8,6 +8,12 @@
 
 // var_dump($_SERVER);
 
+/****
+*
+* URI Reading
+*
+*/
+
 $request_uri = $_SERVER['REQUEST_URI'];
 $script_name = $_SERVER['SCRIPT_NAME'];
 
@@ -25,23 +31,26 @@ $request_uri = array_diff($e_request_uri, $e_script_name);
 
 $o_request_uri = array_values($request_uri);
 
-var_dump($o_request_uri);
+// var_dump($o_request_uri);
+
+define('DD', realpath(__DIR__ . "/.."));
 
 
-define('DD', "../");
-
-require DD . "wpa24/functions.php";
+require DD . "/wpa24/functions.php";
+require DD . "/app/controller/controllers.php";
 
 if(empty($o_request_uri)) {
-	get_view('home');
+	HomeController();
 } else {
-	get_view($o_request_uri[0]);
+	$controller = ucfirst($o_request_uri[0]) . "Controller";
+	if(function_exists($controller)) {
+		array_shift($o_request_uri);
+		call_user_func_array($controller, $o_request_uri);	
+	} else {
+		echo "404";
+	}
+	
 }
-
-
-
-
-
 
 
 
