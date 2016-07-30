@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Home Page</title>
+	<title><?php echo $site_title; ?></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Home Page</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1><?php echo $title; ?></h1>
+				<p><?php echo $body; ?></p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

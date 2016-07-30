@@ -1,15 +1,34 @@
 <?php 
 function HomeController() {
-	get_view('home');
+	get_config('app.foo.bar');
+	
+	$data = [
+		'site_title'	=> get_config('app.site_title'),
+		'title'			=> 'Test Title',
+		'body'			=> 'blah blah blah!'
+	];
+	echo get_view('home', $data);
 }
 
 function BlogController($category) {
 	echo $category;
-	get_view('blog');
+	echo get_view('blog');
 }
 
 function PageController() {
-	get_view('page');
+	$data = [
+		'site_title'	=> get_config('app.site_title')
+	];
+	echo get_view('page', $data);
 }
 
  ?>
+
+
+
+
+
+
+
+
+
