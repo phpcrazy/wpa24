@@ -1,7 +1,8 @@
 <?php 
 function HomeController() {
-	get_config('app.foo.bar');
-	
+	echo get_config('app.foo.bar');
+	die();
+
 	$data = [
 		'site_title'	=> get_config('app.site_title'),
 		'title'			=> 'Test Title',

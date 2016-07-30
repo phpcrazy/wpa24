@@ -25,10 +25,18 @@ function get_config($value) {
 	$config_file = DD . "/app/config/" . $e_value[0] . ".php";
 	if(file_exists($config_file)) {
 		$config = include $config_file;
-		return $config[$e_value[1]];
+		$slice_value = array_slice($e_value, 1);
+		return _arrayResolver($slice_value, $config);
 	} else {
 		echo "File not found idiot!";
 	}
+}
+
+function _arrayResolver($key, $default_array) {
+	foreach ($key as $k => $value) {
+		$default_array = $default_array[$value];
+	}
+	return $default_array;
 }
 
 ?>
