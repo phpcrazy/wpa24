@@ -37,6 +37,7 @@ define('DD', realpath(__DIR__ . "/.."));
 
 
 require DD . "/wpa24/functions.php";
+require DD . "/wpa24/dbprovider.php";
 require DD . "/app/controller/controllers.php";
 
 if(empty($o_request_uri)) {

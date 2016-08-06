@@ -9,8 +9,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1><?php echo $title; ?></h1>
-				<p><?php echo $body; ?></p>
+				<?php foreach($blogs as $blog) { ?>
+					<h1><?php echo $blog['title']; ?></h1>
+					<p><?php echo $blog['body']; ?></p>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

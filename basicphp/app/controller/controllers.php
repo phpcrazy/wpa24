@@ -1,12 +1,15 @@
 <?php 
 function HomeController() {
-	echo get_config('app.foo.bar');
-	die();
 
+	// $blogs = db_select('blogs');
+
+	$blogs = db_select('blogs', ['title', 'body']);
+	
 	$data = [
-		'site_title'	=> get_config('app.site_title'),
-		'title'			=> 'Test Title',
-		'body'			=> 'blah blah blah!'
+	'site_title'	=> get_config('app.site_title'),
+	'title'			=> 'Test Title',
+	'body'			=> 'blah blah blah!',
+	'blogs'			=> $blogs 
 	];
 	echo get_view('home', $data);
 }
@@ -18,18 +21,11 @@ function BlogController($category) {
 
 function PageController() {
 	$data = [
-		'site_title'	=> get_config('app.site_title')
+	'site_title'	=> get_config('app.site_title')
 	];
 	echo get_view('page', $data);
 }
 
- ?>
-
-
-
-
-
-
-
+?>
 
 
