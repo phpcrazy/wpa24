@@ -16,7 +16,6 @@ function db_select($table_name, $fields = null) {
 	if($fields == null) {
 		$sql = "SELECT * FROM " . $table_name;	
 	} else {
-		
 		$e_fields = implode(",", $fields);
 		$sql = "SELECT " . $e_fields . " FROM " . $table_name;
 	}

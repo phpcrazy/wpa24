@@ -39,6 +39,10 @@ function _arrayResolver($key, $default_array) {
 	return $default_array;
 }
 
+function site_url() {
+	return get_config('app.site_link');
+}
+
 ?>
 
 
