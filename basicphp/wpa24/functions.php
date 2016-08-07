@@ -43,6 +43,19 @@ function site_url() {
 	return get_config('app.site_link');
 }
 
+function dump($data, $die = false) {
+	var_dump($data);
+	if($die) {
+		die();
+	}
+}
+
+function redirect($url, $statusCode = 303)
+{
+   header('Location: ' . $url, true, $statusCode);
+   die();
+}
+
 ?>
 
 
