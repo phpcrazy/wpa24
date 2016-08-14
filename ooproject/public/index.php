@@ -1,9 +1,9 @@
 <?php
 
-//$students = DB::table("students")->get();
-$students = DB::table("students")->where('id', 'name', 'address');
+$students = DB::table("students")->get();
+$stus = DB::table("students")->where('name', 'address')->get();
 var_dump($students);
-
+var_dump($stus);
 
 class DB extends PDO {
 
