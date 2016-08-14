@@ -1,12 +1,8 @@
 <?php
 
-$students = DB::table("students")->get();
+//$students = DB::table("students")->get();
+$students = DB::table("students")->where('id', 'name', 'address');
 var_dump($students);
-$stus = DB::table("students")->get();
-
-foreach ($stus as $student) {
-    var_dump($student['name']);
-}
 
 
 class DB extends PDO {
@@ -40,6 +36,11 @@ class DB extends PDO {
         $prep = $this->prepare("SELECT * FROM " . $this->table_name);
         $prep->execute();
         return $prep->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Scalar type declarations
+    public function where(string ...$values) {
+        var_dump($values);
     }
 
     public function __construct(){
