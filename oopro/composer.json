@@ -1,7 +1,9 @@
 {
 	"autoload": {
 		"classmap": [
-			"app/controller"
+			"app/controller",
+			"wpa24/lib",
+			"wpa24/provider"
 		]
 	}
 }

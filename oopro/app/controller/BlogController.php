@@ -1,7 +1,12 @@
 <?php 
 
 class BlogController {
-	public function index() {
-		echo "Blog Controller!";
+	public function index($category, $id) {
+
+		$data = [
+			'category' 	=> $category,
+			'id'		=> $id 
+		];
+		echo View::make("home", $data);
 	}
  }

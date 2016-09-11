@@ -8,8 +8,10 @@ class ComposerStaticInit590d4f4299222c60936a538add3ae70f
 {
     public static $classMap = array (
         'BlogController' => __DIR__ . '/../..' . '/app/controller/BlogController.php',
+        'Helper' => __DIR__ . '/../..' . '/wpa24/lib/Helper.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controller/HomeController.php',
         'PageController' => __DIR__ . '/../..' . '/app/controller/PageController.php',
+        'View' => __DIR__ . '/../..' . '/wpa24/provider/ViewProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
