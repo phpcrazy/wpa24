@@ -1,5 +1,8 @@
 {
 	"autoload": {
+		"files": [
+			"wpa24/helpers.php"
+		],
 		"classmap": [
 			"app/controller",
 			"wpa24/lib",

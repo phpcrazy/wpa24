@@ -6,8 +6,14 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit590d4f4299222c60936a538add3ae70f
 {
+    public static $files = array (
+        '1be63435e73c69893c3b9257d0ddcba1' => __DIR__ . '/../..' . '/wpa24/helpers.php',
+    );
+
     public static $classMap = array (
         'BlogController' => __DIR__ . '/../..' . '/app/controller/BlogController.php',
+        'Config' => __DIR__ . '/../..' . '/wpa24/lib/ConfigReader.php',
+        'DB' => __DIR__ . '/../..' . '/wpa24/provider/DBProvider.php',
         'Helper' => __DIR__ . '/../..' . '/wpa24/lib/Helper.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controller/HomeController.php',
         'PageController' => __DIR__ . '/../..' . '/app/controller/PageController.php',

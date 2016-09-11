@@ -5,8 +5,12 @@ class BlogController {
 
 		$data = [
 			'category' 	=> $category,
-			'id'		=> $id 
+			'id'		=> $id,
+			'students'	=> DB::table("students")->get()
 		];
+
+		var_dump($data);
+		die();
 		echo View::make("home", $data);
 	}
  }

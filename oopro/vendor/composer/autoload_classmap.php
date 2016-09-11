@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'BlogController' => $baseDir . '/app/controller/BlogController.php',
+    'Config' => $baseDir . '/wpa24/lib/ConfigReader.php',
+    'DB' => $baseDir . '/wpa24/provider/DBProvider.php',
     'Helper' => $baseDir . '/wpa24/lib/Helper.php',
     'HomeController' => $baseDir . '/app/controller/HomeController.php',
     'PageController' => $baseDir . '/app/controller/PageController.php',
