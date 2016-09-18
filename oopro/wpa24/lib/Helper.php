@@ -11,9 +11,13 @@ class Helper {
 
 	public static function is_routeWithParameters($routes, $controller) {
 		$real_route = $routes[$controller];
-		$params = $real_route['params'];
-		$e_params = explode(",", $params);
-		return count($e_params);
+		if(array_key_exists("params", $real_route)) {
+			$params = $real_route['params'];
+			$e_params = explode(",", $params);
+			return count($e_params);	
+		}
+		return 0;
+		
 	}
 }
 

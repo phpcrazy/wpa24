@@ -6,7 +6,8 @@
 		"classmap": [
 			"app/controller",
 			"wpa24/lib",
-			"wpa24/provider"
+			"wpa24/provider",
+			"wpa24/provider/trait"
 		]
 	}
 }

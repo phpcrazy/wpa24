@@ -2,7 +2,9 @@
 
 class HomeController {
 	public function index() {
-		echo "Hello from Controller!";
+		var_dump(DBRead::getInstance());
+		var_dump(DBWrite::getInstance());
+
 	}
 }
 
