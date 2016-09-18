@@ -10,6 +10,20 @@ class ComposerStaticInit590d4f4299222c60936a538add3ae70f
         '1be63435e73c69893c3b9257d0ddcba1' => __DIR__ . '/../..' . '/wpa24/helpers.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Thiha\\' => 6,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Thiha\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/wpa24/src',
+        ),
+    );
+
     public static $classMap = array (
         'BlogController' => __DIR__ . '/../..' . '/app/controller/BlogController.php',
         'Config' => __DIR__ . '/../..' . '/wpa24/lib/ConfigReader.php',
@@ -26,6 +40,8 @@ class ComposerStaticInit590d4f4299222c60936a538add3ae70f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit590d4f4299222c60936a538add3ae70f::$classMap;
 
         }, null, ClassLoader::class);

@@ -3,6 +3,9 @@
 		"files": [
 			"wpa24/helpers.php"
 		],
+		"psr-4": {
+			"Thiha\\": "wpa24/src"
+		},
 		"classmap": [
 			"app/controller",
 			"wpa24/lib",
