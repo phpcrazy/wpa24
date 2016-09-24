@@ -10,7 +10,8 @@
 			"app/controller",
 			"wpa24/lib",
 			"wpa24/provider",
-			"wpa24/provider/trait"
+			"wpa24/provider/trait",
+			"wpa24/Log/interface"
 		]
 	}
 }

@@ -2,6 +2,7 @@
 
 define('DD', realpath(__DIR__ . "/.."));
 require DD . "/vendor/autoload.php";
+require DD . "/app/bootstrap.php";
 
 // URI Formatting
 $request_uri = $_SERVER['REQUEST_URI'];

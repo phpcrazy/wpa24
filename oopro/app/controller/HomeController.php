@@ -4,39 +4,26 @@ use Thiha\App\Application;
 use Thiha\Core\Test;
 
 class HomeController {
+	private $dog;
+	private $cat;
+	private $log;
+	public function __construct() {
+		$this->log = Application::get("log");
+		$this->dog = Application::get('dog');
+		$this->cat = Application::get('cat');
+	}
+
 	public function index() {
-		// var_dump(DBRead::getInstance());
-		// var_dump(DBWrite::getInstance());
-		$cat = new Cat();
-		$dog = new Dog();
-		Application::add($cat);
-		Application::add($dog);
-		// Application::add($cat); // can't add two simlilar object
-		$anotherCat = Application::get("cat");
-		$anotherDog = Application::get("dog");
-		Application::remove("cat");
-		Application::add($cat);
+	
+		$logFile = $this->log->getLog('file', ["test"]);
+		$logFile->write("test", "Hello World!");
+		$logMysql = $this->log->getLog("mysql", ["test"]);
+		$logMysql->write("mysql", "Hello Redis");
+		$logFile = $this->log->getLog('file', ["test"]);
+		$logFile->write("another", "How are you");
+		$logMysql = $this->log->getLog("mysql", ["test"]);
+		$logMysql->write("mysql", "Hello Redis");
 		
-
-
-		$anotherDog->bark();
-		$anotherCat->eat();
-
-		
-		
-
-	}
-}
-
-class Cat {
-	public function eat() {
-		echo "EAT";
-	}
-}
-
-class Dog {
-	public function bark() {
-		echo "Woof!";
 	}
 }
 

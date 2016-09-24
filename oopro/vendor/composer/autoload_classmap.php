@@ -13,6 +13,7 @@ return array(
     'DBWrite' => $baseDir . '/wpa24/provider/trait/DBWrite.php',
     'Helper' => $baseDir . '/wpa24/lib/Helper.php',
     'HomeController' => $baseDir . '/app/controller/HomeController.php',
+    'LogInterface' => $baseDir . '/wpa24/Log/interface/LogInterface.php',
     'PageController' => $baseDir . '/app/controller/PageController.php',
     'TraitSingleton' => $baseDir . '/wpa24/provider/trait/TraitSingleton.php',
     'View' => $baseDir . '/wpa24/provider/ViewProvider.php',

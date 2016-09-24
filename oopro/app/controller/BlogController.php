@@ -1,8 +1,15 @@
 <?php 
+use Thiha\App\Application;
 
 class BlogController {
-	public function index($category, $id) {
+	private $cat;
 
+	public function __construct() {
+		$this->cat = Application::get("cat");
+	}
+
+	public function index($category, $id) {
+		$this->cat->eat();
 		$data = [
 			'category' 	=> $category,
 			'id'		=> $id,

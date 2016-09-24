@@ -32,6 +32,7 @@ class ComposerStaticInit590d4f4299222c60936a538add3ae70f
         'DBWrite' => __DIR__ . '/../..' . '/wpa24/provider/trait/DBWrite.php',
         'Helper' => __DIR__ . '/../..' . '/wpa24/lib/Helper.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controller/HomeController.php',
+        'LogInterface' => __DIR__ . '/../..' . '/wpa24/Log/interface/LogInterface.php',
         'PageController' => __DIR__ . '/../..' . '/app/controller/PageController.php',
         'TraitSingleton' => __DIR__ . '/../..' . '/wpa24/provider/trait/TraitSingleton.php',
         'View' => __DIR__ . '/../..' . '/wpa24/provider/ViewProvider.php',

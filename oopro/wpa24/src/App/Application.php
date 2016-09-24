@@ -7,9 +7,8 @@ class Application {
 
     static public function add($object, $name = null) {
         $name = (!is_null($name)) ? $name : get_class($object);
-        var_dump(get_class($object));
         $name = strtolower($name);
-        var_dump($name);
+    
         if(self::contains($name)) {
            throw new \Exception("Object is already existed.");
         }

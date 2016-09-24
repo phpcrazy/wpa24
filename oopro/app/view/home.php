@@ -5,7 +5,6 @@
 	<title>Home</title>
 </head>
 <body>
-	<h1><?php echo $category; ?></h1>
-	<h2><?php echo $id; ?></h2>
+	<h1>Home Page</h1>
 </body>
 </html>
